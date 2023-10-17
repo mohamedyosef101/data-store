@@ -1,0 +1,67 @@
+@model ProjectWithCategory
+@{
+    ViewData["Title"] = "Project Details";
+}
+
+<!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>@Model.Project.Name</h2>
+              <p>@Model.Project.Info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="/Home">Home</a></li>
+            <li><a href="/Home/Projects">Projects</a></li>
+            <li>@Model.Project.Name</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+<!-- End Breadcrumbs -->
+
+<!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8">
+            <div class="position-relative h-100">
+            <div class="slides-1 portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                    <img style="max-width: 80%;" src="/@Model.Project.ImgUrl" alt="">
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong> <span>@Model.CategoryName</span></li>
+                <li><strong>Brand</strong> <span>Life Groups</span></li>
+                <li><strong>Project Name</strong> <span>@Model.Project.Name</span></li>
+                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
+                <li><a href="#" class="btn-visit align-self-start">See it on Behance</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+<!-- End Portfolio Details Section -->

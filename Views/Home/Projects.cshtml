@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Projects";
+}
+
+@model IEnumerable<Project>
+
+<!-- ======= Projects Section ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Discover our history</p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row gy-4 portfolio-container">
+
+            @foreach (var project in Model) {
+                <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <a href="@project.ImgUrl" data-gallery="portfolio-gallery-app" class="glightbox">
+                        <img src="~/@project.ImgUrl" class="img-fluid" alt=""></a>
+                        <div class="portfolio-info">
+                            <h4>
+                              <a href="@Url.Action("Details", "Home", new { id = project.Id })">@project.Name</a>
+                            </h4>
+                            <p>@project.Info</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- End Projects Item -->
+
+          </div>
+          <!-- End Projects Container -->
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Projects Section -->

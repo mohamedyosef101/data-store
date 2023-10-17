@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "About";
+}
+@model List<Brand>
+
+<!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>There are troubles and annoyances that occur for no reason, bringing pain though nothing is deserved. Everything we attempt becomes frustration and hardship.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>The greatest pleasures come from acting with wisdom.</h3>
+            <img src="~/assets/img/about.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <p>We should avoid what is wrong in order to gain forgiveness. Finding fulfillment means looking beyond what simply pleases us. We are obliged to reject hateful and harmful things, even if they seem enjoyable at the time. 
+                Acting with integrity allows us to escape from temptation's grasp.</p>
+            <p>There are times when we stray from what is right. Though we may be driven by selfish desires or misguided duties, 
+                life offers better. With wisdom, we can choose rightly and live meaningfully. 
+                Mistakes will come, and we may hurt others or ourselves, but redemption is possible when we act out of care. 
+                If we nurture goodwill, we find purpose and joy.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                More than good
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> High quality</li>
+                <li><i class="bi bi-check-circle-fill"></i> Unbelievable creativity</li>
+                <li><i class="bi bi-check-circle-fill"></i> Incredible speed</li>
+              </ul>
+              <p>
+                We must work diligently, but within ethical bounds. Causing unjust harm or needless suffering is wrong. 
+                Though we pursue success, we should act with compassion. If we respect humanity in others and in ourselves, we can live in fellowship.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="~/assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+                <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+<!-- End About Us Section -->
+
+
+<!-- ======= Brands Section ======= -->
+    <section id="clients" class="clients">
+        <div class="container" data-aos="zoom-out">
+            <div class="clients-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                    @foreach (var brand in Model) {
+                        <div class="swiper-slide">
+                            <img src="~/@brand.ImgUrl" class="img-fluid" alt="">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End Brands Section -->
+
+
+<!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <img src="~/assets/img/stats-img.svg" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> with our services</p>
+            </div>
+            <!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> done with high conversion rates</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> with no scape</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+<!-- End Stats Counter Section -->
+
+
+<!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <a href="https://youtu.be/TX9qSaGXFyg" class="glightbox play-btn"></a>
+        <h3>Let's Explore The Future</h3>
+        <p> With its specialty focus and expertise, DATA Store has emerged as a go-to retail destination for all things tech. 
+            As technology continues rapidly evolving, the company is poised for future growth by keeping its inventory, services, 
+            and stores on the cutting edge.
+        </p>
+        <a class="cta-btn" href="#">Explore Now</a>
+      </div>
+    </section>
+<!-- End Call To Action Section -->
